@@ -3,3 +3,6 @@ dev:
 
 test:
 	poetry run pytest tests
+
+consume:
+	poetry run python src/consume.py
