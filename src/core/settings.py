@@ -24,5 +24,18 @@ class MessageBrokerSettings(BaseSettings):
     )
 
 
+class GameMessageBrokerSettings(BaseSettings):
+    host: str = 'localhost'
+    port: int = 5672
+    db: int = 0
+    encoding: str = 'utf-8'
+
+    model_config = SettingsConfigDict(
+        env_file='.env',
+        env_prefix='GAME_MESSAGE_BROKER_',
+    )
+
+
 app_settings = AppSettings()
 message_broker_settings = MessageBrokerSettings()
+game_message_broker_settings = GameMessageBrokerSettings()
