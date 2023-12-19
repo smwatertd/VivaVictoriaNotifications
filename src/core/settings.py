@@ -12,4 +12,17 @@ class AppSettings(BaseSettings):
     )
 
 
+class MessageBrokerSettings(BaseSettings):
+    host: str = 'localhost'
+    port: int = 5672
+    virtual_host: str = '/'
+    exchange: str = 'notifications'
+
+    model_config = SettingsConfigDict(
+        env_file='.env',
+        env_prefix='MESSAGE_BROKER_',
+    )
+
+
 app_settings = AppSettings()
+message_broker_settings = MessageBrokerSettings()
