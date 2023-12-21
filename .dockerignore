@@ -1,0 +1,12 @@
+.git
+.pytest_cache
+.venv
+tests
+.dockerignore
+.env
+.gitignore
+Makefile
+README.md
+.vscode
+**/__pycache__
+**/.mypy_cachey
