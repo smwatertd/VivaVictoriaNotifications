@@ -17,6 +17,7 @@ class MessageBrokerSettings(BaseSettings):
     port: int = 5672
     virtual_host: str = '/'
     exchange: str = 'notifications'
+    game_events_queue: str = 'notifications.games.events'
 
     model_config = SettingsConfigDict(
         env_file='.env',
