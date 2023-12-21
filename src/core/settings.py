@@ -26,7 +26,7 @@ class MessageBrokerSettings(BaseSettings):
 
 class GameMessageBrokerSettings(BaseSettings):
     host: str = 'localhost'
-    port: int = 5672
+    port: int = 6379
     db: int = 0
     encoding: str = 'utf-8'
 
