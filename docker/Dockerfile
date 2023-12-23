@@ -75,7 +75,6 @@ COPY --from=builder-base $PYSETUP_PATH $PYSETUP_PATH
 RUN poetry install --only dev
 WORKDIR $APP_PATH
 COPY ./src $APP_PATH/src
-EXPOSE 8000
 CMD [ "python", "src/consume.py" ]
 
 
@@ -85,5 +84,4 @@ WORKDIR $PYSETUP_PATH
 COPY --from=builder-base $PYSETUP_PATH $PYSETUP_PATH
 WORKDIR $APP_PATH
 COPY ./src $APP_PATH/src
-EXPOSE 8000
 CMD [ "python", "src/consume.py" ]
