@@ -1,7 +1,6 @@
 .git
 .pytest_cache
 .venv
-tests
 .dockerignore
 .env
 .gitignore
