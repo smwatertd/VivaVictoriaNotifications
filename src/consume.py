@@ -6,10 +6,11 @@ from core.container import container
 from core.settings import message_broker_settings
 
 
-BASE_DIR = Path(__file__).parent
+LOGS_DIR = Path(__file__).parents[1] / 'logs'
+LOGS_DIR.mkdir(exist_ok=True)
 
 logger = logging.getLogger(__name__)
-logger.addHandler(logging.FileHandler(BASE_DIR / 'consume.log', encoding='utf-8'))
+logger.addHandler(logging.FileHandler(LOGS_DIR / 'consume.log', mode='a', encoding='utf-8'))
 
 
 async def main() -> None:
